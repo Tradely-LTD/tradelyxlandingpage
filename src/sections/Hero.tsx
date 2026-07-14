@@ -120,18 +120,21 @@ export default function Hero() {
     <section id="home" ref={wrapRef} className="relative md:h-[220vh]">
       <div
         ref={heroRef}
-        className="relative overflow-hidden px-4 pt-10 pb-10 md:sticky md:top-0 md:flex md:h-screen md:flex-col md:justify-center md:px-6 md:pt-28 md:pb-12"
+        className="relative isolate overflow-hidden px-4 pt-10 pb-10 md:sticky md:top-0 md:flex md:h-screen md:flex-col md:justify-center md:px-6 md:pt-28 md:pb-12"
       >
-        <div ref={gridRef} className="pointer-events-none absolute inset-[-15%] -z-30">
+        <div
+          ref={gridRef}
+          className="pointer-events-none absolute inset-x-0 top-0 -z-30 h-[560px] overflow-hidden md:inset-[-15%] md:h-auto"
+        >
           <img
             src={heroFactory}
             alt="Fresh produce sorted and crated at a food processing facility, ready for export"
             className="size-full object-cover"
           />
+          <div className="bg-bg-page/60 pointer-events-none absolute inset-0" />
+          <div className="from-bg-page/75 pointer-events-none absolute inset-0 hidden bg-gradient-to-r via-transparent to-transparent md:block" />
+          <div className="from-bg-page via-bg-page/30 pointer-events-none absolute inset-0 bg-gradient-to-t to-transparent" />
         </div>
-        <div className="bg-bg-page/60 pointer-events-none absolute inset-0 -z-20" />
-        <div className="from-bg-page/75 pointer-events-none absolute inset-0 -z-20 hidden bg-gradient-to-r via-transparent to-transparent md:block" />
-        <div className="from-bg-page via-bg-page/30 pointer-events-none absolute inset-0 -z-20 bg-gradient-to-t to-transparent" />
         <div className="cursor-glow pointer-events-none absolute inset-0 -z-10" />
         <div className="scanline -z-10" />
         <div

@@ -24,7 +24,7 @@ function App() {
     <div className="bg-bg-page min-h-screen">
       <ScrollToTop />
       <Navbar />
-      <main className="overflow-x-hidden">
+      <main className="overflow-x-clip">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
